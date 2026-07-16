@@ -1,14 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { asteroidHeight, asteroidWidth } from '../theme'
 import { AsteroidContext } from './HomePage'
 
-const StyledAsteroid = styled.div`
-width: 25px;
-height: 25px;
-background-color: brown;
-position: absoulte;
-`
 const StyledImage = styled.img`
     width: ${asteroidWidth};
     height: ${asteroidHeight};
@@ -31,7 +25,7 @@ export const RandomAsteroid = () => {
             const storedClicks = parseInt(storedClicksString);
             setClickCount(storedClicks);
         }
-        
+
     }, [])
 
     const handleClick = () => {

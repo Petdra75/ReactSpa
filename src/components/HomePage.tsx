@@ -1,7 +1,6 @@
 import React, { createContext, SetStateAction, useState } from 'react'
 import styled from 'styled-components'
 import { Hero } from './Hero'
-import { ClickCounter } from './CLickCounter'
 import { APP_TITLE, FIRST_PARAGRAPH, HERO_IMAGE_PATH, SECOND_PARAGRAPH } from '../content'
 import { RandomAsteroid } from './RandomAsteroid'
 
@@ -23,7 +22,7 @@ const StyledAsteroidCounter = styled.div`
   color: brown;
 `
 const HomePage = () => {
-   const [clickCount, setClickCount] = useState(0)
+  const [clickCount, setClickCount] = useState(0)
    
   return (
     <StyledHomePage>
@@ -35,7 +34,6 @@ const HomePage = () => {
         secondParagraph={SECOND_PARAGRAPH}
         imagePath={HERO_IMAGE_PATH}
         />
-        
         <RandomAsteroid/>
       </AsteroidContext>
 
