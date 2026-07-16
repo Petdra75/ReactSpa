@@ -22,7 +22,7 @@ const StyledParagraph = styled.p`
 `
 const StyledImage = styled.img`
     align-self: center;
-    width: 80%;
+    width: 50%;
 `
 interface HeroProps {
     title: string
