@@ -35,7 +35,6 @@ export const RandomAsteroid = () => {
     }, [])
 
     const handleClick = () => {
-        
         setClickCount(clickCount+1)
         localStorage.setItem("clickCount", clickCount.toString())
         setAsteroidPosition(getRandomCoords())
