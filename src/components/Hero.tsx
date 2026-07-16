@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { heroSectionGap, paragrphFontSize, titleFontSize } from '../theme'
+import { HERO_SECTION_GAP, PARAGRAPH_FONT_SIZE, TITLE_FONT_SIZE } from '../theme'
 
 const StyledHeroSectionContainer = styled.div`
     width: 80%;
@@ -8,17 +8,17 @@ const StyledHeroSectionContainer = styled.div`
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    gap: ${heroSectionGap};
+    gap: ${HERO_SECTION_GAP};
     text-align: center;
     align-self: center;
 `
 const StyledTitle = styled.h1`
-    font-size: ${titleFontSize};
+    font-size: ${TITLE_FONT_SIZE};
     color: black;
     opacity: 80%;
 `
 const StyledParagraph = styled.p`
-    font-size: ${paragrphFontSize};
+    font-size: ${PARAGRAPH_FONT_SIZE};
     text-align: left;
     width: 80%;
     text-indent: 40px;

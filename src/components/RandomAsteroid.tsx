@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { asteroidHeight, asteroidWidth } from '../theme'
+import { ASTEROID_HEIGHT, ASTEROID_WIDTH } from '../theme'
 import { AsteroidContext } from './HomePage'
 
 const StyledImage = styled.img`
-    width: ${asteroidWidth};
-    height: ${asteroidHeight};
+    width: ${ASTEROID_WIDTH};
+    height: ${ASTEROID_HEIGHT};
 `
 const getRandomCoords = () : {x: number, y:number} => {
         const randomX = (window.innerWidth) * Math.random()
@@ -36,8 +36,8 @@ export const RandomAsteroid = () => {
     
         return (
     <div style={{
-        width: asteroidWidth,
-        height: asteroidHeight, 
+        width: ASTEROID_WIDTH,
+        height: ASTEROID_HEIGHT, 
         background : "brown",
         position: "absolute",
         top: asteroidPosition.y,
