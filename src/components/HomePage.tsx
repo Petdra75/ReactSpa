@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Hero } from './Hero'
 import { ClickCounter } from './CLickCounter'
+import { ComplexCounter } from './ComplexCounter'
 
 const APP_TITLE =  "Nasa. The G.O.A.T of space"
 const FIRST_PARAGRAPH = "For more than 65 years, NASA has made the seemingly impossible, possible. At its 20 centers and facilities across the country and with U.S. commercial companies and international partners, NASA leads studying Earth science, including climate, our Sun, solar system, and the larger universe"
@@ -13,15 +14,30 @@ const StyledHomePage = styled.div`
     flex-direction: column;
 `
 
+const StyledClickerContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+`
+
 const HomePage = () => {
   return (
     <StyledHomePage>
+        
         <Hero 
         title={APP_TITLE}
         firstParagraph={FIRST_PARAGRAPH}
         secondParagraph={SECOND_PARAGRAPH}
-        imagePath={HERO_IMAGE_PATH}/>
-        <ClickCounter/>
+        imagePath={HERO_IMAGE_PATH}
+        />
+
+        <StyledClickerContainer>
+            <p>simple counter</p>
+            <ClickCounter/>
+            <p>complex counter</p>
+            <ComplexCounter/>
+        </StyledClickerContainer>
     </StyledHomePage>
   )
 }

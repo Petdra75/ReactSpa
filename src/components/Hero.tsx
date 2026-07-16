@@ -22,25 +22,22 @@ const StyledImage = styled.img`
     align-self: center;
     width: 80%;
 `
-interface HeroProps  {
+interface HeroProps {
     title: string
     firstParagraph: string
     secondParagraph: string
     imagePath: string 
 }
 
-export const Hero = ({title, firstParagraph, secondParagraph, imagePath} : HeroProps) => {
+export const Hero : React.FC<HeroProps> = ({title, firstParagraph, secondParagraph, imagePath} : HeroProps) => {
   return (
     <StyledHero>
         
         <StyledTitle>{title}</StyledTitle>
-        
         <StyledParagraph>{firstParagraph}</StyledParagraph>
-        
         <StyledParagraph>{secondParagraph}</StyledParagraph>
-
         <StyledImage src={imagePath} alt="image of a galaxy" />
-
+        
     </StyledHero>
   )
 }

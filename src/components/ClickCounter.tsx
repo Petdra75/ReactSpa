@@ -4,19 +4,19 @@ export const ClickCounter = () => {
     const [clickCount, setClickCount] = useState(0)
 
     useEffect(() => {
-        const storedClicksString: string | null = localStorage.getItem("clickCount")
+        const storedClicks : number | null = getStoredClicks();
         
-        if (storedClicksString){
-            const storedClicks = parseInt(storedClicksString);
-            console.log(storedClicks)
-            setClickCount(storedClicks);
+        if (storedClicks){
+            setClickCount(storedClicks)
         }
 
     }, [])
+
     const handleClick = () => {
         setClickCount(clickCount + 1);
         localStorage.setItem("clickCount", clickCount.toString());
     }
+    
     return (
     <div>
         <h3>Clicked {clickCount} times</h3>
