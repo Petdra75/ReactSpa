@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 
-
 export const ClickCounter = () => {
     const [clickCount, setClickCount] = useState(0)
 

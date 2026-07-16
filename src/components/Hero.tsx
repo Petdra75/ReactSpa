@@ -28,6 +28,7 @@ interface HeroProps  {
     secondParagraph: string
     imagePath: string 
 }
+
 export const Hero = ({title, firstParagraph, secondParagraph, imagePath} : HeroProps) => {
   return (
     <StyledHero>
