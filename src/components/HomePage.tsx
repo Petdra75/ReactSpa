@@ -20,7 +20,8 @@ const HomePage = () => {
         title={APP_TITLE}
         firstParagraph={FIRST_PARAGRAPH}
         secondParagraph={SECOND_PARAGRAPH}
-        imagePath={HERO_IMAGE_PATH}/>
+        imagePath={HERO_IMAGE_PATH}
+        />
         <ClickCounter/>
     </StyledHomePage>
   )
